@@ -11,4 +11,7 @@ public interface NotePresenter {
     // This will be called when the activity is on onResume
     // Meaning that the activity is created and ready to be filled with data
     void onResume();
+
+    void removeNote(int position);
+
 }

@@ -11,6 +11,4 @@ public interface NotesView {
 
     // Call this when a new note is added or one is removed just notify the adapter
     void updateNotes();
-
-    void removeNote(int position);
 }
