@@ -22,7 +22,8 @@ public class NotePresenterImplement implements NotePresenter, GetNotesInteractio
 
     @Override
     public void onResume() {
-        getNotesInteraction.getNotesFromModel();
+        // Here "this" says to method that "Dude you can use the implementation that I did here!"
+        getNotesInteraction.getNotesFromModel(this);
     }
 
     @Override
