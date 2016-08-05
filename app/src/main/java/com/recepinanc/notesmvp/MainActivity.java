@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements NotesView, Adapte
         notePresenter = new NotePresenterImplement(this, new GetNotesInteractionImplement());
     }
 
-    @Overridel
+    @Override
     protected void onResume() {
         super.onResume();
         notePresenter.onResume();
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements NotesView, Adapte
 
     @Override
     public void setNotes(List<String> notes) {
-        noteList.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.activity_list_item, notes));
+        noteList.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, notes));
     }
 
     @Override
@@ -49,6 +49,6 @@ public class MainActivity extends AppCompatActivity implements NotesView, Adapte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        notePresenter.onClick(position);
     }
 }
