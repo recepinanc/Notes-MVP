@@ -9,5 +9,4 @@ public interface NotePresenter {
     void onLongClick(int position);
 
     void getNotes();
-
 }
