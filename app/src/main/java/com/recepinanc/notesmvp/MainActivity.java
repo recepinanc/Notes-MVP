@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements NotesView, Adapte
         notePresenter = new NotePresenterImplement(this, new GetNotesInteractionImplement());
     }
 
-    @Override
+    @Overridel
     protected void onResume() {
         super.onResume();
         notePresenter.onResume();
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity implements NotesView, Adapte
     @Override
     public void updateNotes() {
         noteList.getAdapter().notify();
+    }
+
+    @Override
+    public void showPosition(int position) {
+        Toast.makeText(MainActivity.this, "Position : " + position, Toast.LENGTH_SHORT).show();
     }
 
     @Override

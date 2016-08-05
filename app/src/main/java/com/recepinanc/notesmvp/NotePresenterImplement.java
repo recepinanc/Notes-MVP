@@ -16,8 +16,8 @@ public class NotePresenterImplement implements NotePresenter, GetNotesInteractio
     }
 
     @Override
-    public void onLongClick(int position) {
-        notesView.removeNote(position);
+    public void onClick(int position) {
+        notesView.showPosition(position);
     }
 
     @Override
