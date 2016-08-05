@@ -7,6 +7,10 @@ import java.util.List;
  */
 public interface GetNotesInteraction {
 
-    List<String> getNotesFromModel();
+    void getNotesFromModel(OnGetNotesFromModel onGetNotesFromModel);
+
+    interface OnGetNotesFromModel {
+        void onGetNotes(List<String> items);
+    }
 
 }

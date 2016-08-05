@@ -8,5 +8,7 @@ public interface NotePresenter {
     // No need to use an extra interface bec. there's no interaction with Model
     void onLongClick(int position);
 
-    void getNotes();
+    // This will be called when the activity is on onResume
+    // Meaning that the activity is created and ready to be filled with data
+    void onResume();
 }

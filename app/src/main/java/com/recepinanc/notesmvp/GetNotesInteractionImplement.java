@@ -9,8 +9,8 @@ import java.util.List;
 public class GetNotesInteractionImplement implements GetNotesInteraction {
 
     @Override
-    public List<String> getNotesFromModel() {
-        return notes();
+    public void getNotesFromModel(OnGetNotesFromModel onGetNotesFromModel) {
+        onGetNotesFromModel.onGetNotes(notes());
     }
 
     // This is the model part
@@ -30,4 +30,5 @@ public class GetNotesInteractionImplement implements GetNotesInteraction {
                 "Note 12"
         );
     }
+
 }
